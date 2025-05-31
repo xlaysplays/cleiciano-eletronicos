@@ -1,142 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cleiciano Eletrônicos</title>
   <style>
+    /* Estilo básico do corpo */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f2f2f2;
-      color: #333;
-    }
-    header {
-      background-color: #004080;
+      background-color: #003366;
       color: white;
-      padding: 25px 10px;
-      text-align: center;
-    }
-    nav {
-      background-color: #0066cc;
-      padding: 12px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .produtos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .produto {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 7px rgba(0,0,0,0.15);
-      padding: 15px;
-      width: 200px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .produto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    }
-    .produto h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-    footer {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 18px 10px;
-      margin-top: 50px;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .produtos {
-        flex-direction: column;
-        align-items: center;
-      }
-      .produto {
-        width: 90%;
-      }
+    header {
+      background-color: #002244;
+      padding: 15px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* Botão menu hamburguer */
+    #menu-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    /* Sidebar lateral */
+    #sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #004080;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    }
+
+    #sidebar a.sidebar-link {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    #sidebar a.sidebar-link:hover {
+      background-color: #0066cc;
+    }
+
+    /* Conteúdo principal para efeito */
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Cleiciano Eletrônicos</h1>
-  <p>Os melhores eletrônicos com os melhores preços!</p>
-</header>
+  <header>
+    <h1>Cleiciano Eletrônicos</h1>
+    <button id="menu-btn" aria-label="Abrir menu">&#9776;</button>
+  </header>
 
-<nav>
-  <a href="#inicio">Início</a>
-  <a href="#produtos">Produtos</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contato">Contato</a>
-</nav>
+  <nav id="sidebar">
+    <a href="#inicio" class="sidebar-link">Principal</a>
+    <a href="#produtos" class="sidebar-link">Loja</a>
+    <a href="#sobre" class="sidebar-link">Sobre Nós</a>
+    <a href="#contato" class="sidebar-link">Configurações</a>
+  </nav>
 
-<section id="inicio">
-  <h2>Bem-vindo à Cleiciano Eletrônicos!</h2>
-  <p>Aqui você encontra celulares, fones de ouvido, carregadores e muito mais com qualidade e preço justo.</p>
-</section>
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo à Cleiciano Eletrônicos</h2>
+      <p>Os melhores eletrônicos para você!</p>
+    </section>
 
-<section id="produtos">
-  <h2>Nossos Produtos</h2>
-  <div class="produtos">
-    <div class="produto">
-      <h3>Smartphone X</h3>
-      <p>R$ 1.299,00</p>
-    </div>
-    <div class="produto">
-      <h3>Fone Bluetooth</h3>
-      <p>R$ 129,00</p>
-    </div>
-    <div class="produto">
-      <h3>Carregador Turbo</h3>
-      <p>R$ 79,90</p>
-    </div>
-    <!-- Você pode adicionar mais produtos aqui -->
-  </div>
-</section>
+    <section id="produtos">
+      <h2>Loja</h2>
+      <p>Confira nossos produtos incríveis.</p>
+    </section>
 
-<section id="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Cleiciano é um empreendedor dedicado que começou a loja com o objetivo de trazer tecnologia acessível a todos. Com anos de experiência, ele garante atendimento de qualidade e produtos confiáveis.</p>
-</section>
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>Conheça a história da nossa loja.</p>
+    </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>WhatsApp: (xx) 9xxxx-xxxx</p>
-  <p>Email: contato@cleicianoeletronicos.com</p>
-</section>
+    <section id="contato">
+      <h2>Configurações</h2>
+      <p>Ajuste suas preferências aqui.</p>
+    </section>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Cleiciano Eletrônicos - Todos os direitos reservados.</p>
-</footer>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      if (sidebar.style.width === '250px') {
+        sidebar.style.width = '0';
+      } else {
+        sidebar.style.width = '250px';
+      }
+    });
+
+    // Fecha o menu quando clica em algum link
+    const links = sidebar.querySelectorAll('a.sidebar-link');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.style.width = '0';
+      });
+    });
+  </script>
 
 </body>
-  </html>
-      
+</html>
