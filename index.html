@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cleiciano Eletrônicos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 25px 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0066cc;
+      padding: 12px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .produto {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+    .produto h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 18px 10px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .produtos {
+        flex-direction: column;
+        align-items: center;
+      }
+      .produto {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cleiciano Eletrônicos</h1>
+  <p>Os melhores eletrônicos com os melhores preços!</p>
+</header>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="inicio">
+  <h2>Bem-vindo à Cleiciano Eletrônicos!</h2>
+  <p>Aqui você encontra celulares, fones de ouvido, carregadores e muito mais com qualidade e preço justo.</p>
+</section>
+
+<section id="produtos">
+  <h2>Nossos Produtos</h2>
+  <div class="produtos">
+    <div class="produto">
+      <h3>Smartphone X</h3>
+      <p>R$ 1.299,00</p>
+    </div>
+    <div class="produto">
+      <h3>Fone Bluetooth</h3>
+      <p>R$ 129,00</p>
+    </div>
+    <div class="produto">
+      <h3>Carregador Turbo</h3>
+      <p>R$ 79,90</p>
+    </div>
+    <!-- Você pode adicionar mais produtos aqui -->
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Nós</h2>
+  <p>Cleiciano é um empreendedor dedicado que começou a loja com o objetivo de trazer tecnologia acessível a todos. Com anos de experiência, ele garante atendimento de qualidade e produtos confiáveis.</p>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>WhatsApp: (xx) 9xxxx-xxxx</p>
+  <p>Email: contato@cleicianoeletronicos.com</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Cleiciano Eletrônicos - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+  </html>
+      
